@@ -4,17 +4,10 @@ A full-stack, production-inspired e-commerce application built with modern web t
 
 The application focuses on clean separation of concerns, type safety, security best practices, and a smooth user shopping experience.
 
----
+# 🚧 Project Status
 
-# 📸 Preview
+This project is currently under active development.
 
-WORK IN PROGRESS
-
-## Demo
-
-Live Demo: WIP
-
----
 
 # ✨ Features
 
