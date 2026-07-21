@@ -1,12 +1,32 @@
 # 🛒 E-Commerce Mock Project
 
-A full-stack, production-oriented e-commerce application built with modern web technologies. The project demonstrates a scalable architecture with a secure backend, persistent database design, authentication system, API validation, and a dynamic product catalog experience.
+A full-stack, production-inspired e-commerce application built with modern web technologies. The project demonstrates a scalable architecture with a secure backend, persistent database design, authentication system, API validation, and a dynamic product catalog experience.
 
 The application focuses on clean separation of concerns, type safety, security best practices, and a smooth user shopping experience.
 
 ---
 
+# 📸 Preview
+
+WORK IN PROGRESS
+
+## Demo
+
+Live Demo: WIP
+
+---
+
 # ✨ Features
+
+## 🛒 Shopping Features
+
+- Product details pages
+- Add/remove cart items
+- Quantity updates
+- Checkout flow
+- Order history
+- Product reviews
+- Wishlist management
 
 ## 🛍️ Customer Experience
 
@@ -18,6 +38,16 @@ The application focuses on clean separation of concerns, type safety, security b
 - Theme customization
 - Optimized data fetching and caching
 - Form validation with user-friendly error handling
+
+## 💳 Payment System
+
+Stripe integration using test mode.
+
+Features:
+- PaymentIntent API
+- Secure checkout flow
+- Payment confirmation through webhooks
+- Order status synchronization
 
 ## 🔐 Authentication & Security
 
@@ -36,6 +66,86 @@ The application focuses on clean separation of concerns, type safety, security b
 - Modular backend architecture
 - Type-safe frontend development
 - Cloud-hosted database infrastructure
+
+# 🏛️ Backend Architecture
+
+The backend follows a layered architecture:
+
+HTTP Request
+      |
+      ↓
+   Routes
+      |
+      ↓
+ Controllers
+      |
+      ↓
+  Services
+      |
+      ↓
+Repositories
+      |
+      ↓
+ Mongoose Models
+      |
+      ↓
+ MongoDB Atlas
+
+
+### Controllers
+Handle HTTP requests and responses.
+
+### Services
+Contain business logic and application rules.
+
+### Repositories
+Abstract database operations.
+
+### Models
+Define MongoDB schemas using Mongoose.
+
+---
+
+# 🔌 API Overview
+
+## Authentication
+
+| Method | Endpoint | Description |
+|-|-|-|
+| POST | /api/auth/register | Create account |
+| POST | /api/auth/login | Login user |
+
+## Products
+
+| Method | Endpoint | Description |
+|-|-|-|
+| GET | /api/products | Get products |
+| GET | /api/products/:id | Get product |
+| POST | /api/products | Create product (Admin) |
+
+## Orders
+
+| Method | Endpoint | Description |
+|-|-|-|
+| POST | /api/orders | Create order |
+| GET | /api/orders/me | User orders |
+
+---
+
+# 🗄️ Database Design
+User
+|
+├── Cart
+|
+├── Orders
+|
+└── Reviews
+
+Product
+|
+├── Category
+|
+└── Reviews
 
 ---
 
@@ -106,14 +216,14 @@ Used for:
 **JWT (JSON Web Token)**
 
 - Stateless authentication
-- Secure session handling
+- Token-based authentication and authorization
 - Protected API access
 
 ### API Validation
 
 **Zod Middleware**
 
-Used as an API gateway layer to:
+Used as a validation layer to:
 
 - Validate incoming requests
 - Parse request bodies
