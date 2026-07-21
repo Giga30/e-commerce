@@ -70,8 +70,8 @@ Features:
 # 🏛️ Backend Architecture
 
 The backend follows a layered architecture:
-
-HTTP Request
+```
+HTTP Request  
       |
       ↓
    Routes
@@ -90,7 +90,7 @@ Repositories
       |
       ↓
  MongoDB Atlas
-
+```
 
 ### Controllers
 Handle HTTP requests and responses.
@@ -133,6 +133,7 @@ Define MongoDB schemas using Mongoose.
 ---
 
 # 🗄️ Database Design
+```
 User
 |
 ├── Cart
@@ -146,7 +147,7 @@ Product
 ├── Category
 |
 └── Reviews
-
+```
 ---
 
 # 🏗️ Tech Stack
