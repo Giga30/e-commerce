@@ -17,9 +17,8 @@ const userSchema = new mongoose.Schema({
         zipCode: { type: String, required: true, trim: true },
         country: { type: String, required: true, trim: true }
     }],
-
-    createdAt: { type: Date, default: Date.now, immutable: true },
-    updatedAt: { type: Date, default: Date.now },
+}, {
+    timestamps: true
 }); 
 
 module.exports = mongoose.model('User', userSchema)
